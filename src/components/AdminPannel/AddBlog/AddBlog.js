@@ -28,7 +28,7 @@ const AddBlog = () => {
                 <div className="writeFormGroup">
                 <textarea
                     className="writeInput writeText"
-                    placeholder="Tell your story..."
+                    placeholder="Add a story..."
                     type="text"
                     autoFocus={true}
                 />
