@@ -1,0 +1,27 @@
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.37)),url(../../images/pexels-photo-1167355.jpeg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bannerText{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bannerText h3{
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.bannerText p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
