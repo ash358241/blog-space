@@ -28,7 +28,7 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <Route path="/post/:postId">
+        <Route path="/blog/:blogId">
           <SinglePost></SinglePost>
         </Route>
         <PrivateRoute path="/admin">

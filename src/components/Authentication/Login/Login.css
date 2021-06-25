@@ -1,9 +1,23 @@
 .logDiv{
     background-color: #E8E3D9;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logDiv h1{
     font-weight: bold;
     color: #224A49;
 }
+
+.btns{
+    text-align: center;
+    
+}
+
+.btns > Button{
+    margin: 0 10px;
+}
+

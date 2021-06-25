@@ -1,39 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './SinglePost.css';
+import {Link} from 'react-router-dom';
 
 const SinglePost = () => {
-    const admin = true;
+    const {blogId} = useParams();
+    const [blog, setBlog] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/blog/${blogId}`)
+        .then(res => res.json())
+        .then(data => setBlog(data))
+    }, [blogId]);
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
                 <img
                 className="singlePostImg"
-                src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src={blog.imageURL}
                 alt=""
                 />
                 <h1 className="singlePostTitle">
-                    Lorem ipsum dolor
-                        {
-                            admin && 
-                            (
-                                <div className="singlePostEdit">
-                                    <i className="singlePostIcon far fa-trash-alt"> Delete</i>
-                                </div>
-                            )
-                        }
+                    {blog.title}
                 </h1>
-                <div className="singlePostInfo">
-                    <span>
-                        Author:
-                        <b className="singlePostAuthor">
-                            SpecialOne
-                        </b>
-                    </span>
-                    <span>1 day ago</span>
-                </div>
                 <p className="singlePostDesc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora dolores ut excepturi voluptates facere minus aut atque. Velit unde fugiat magni cumque ut nam, dolores eligendi a fuga possimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consectetur, nulla molestiae nesciunt laborum illo soluta accusamus minus ducimus quisquam ipsum excepturi totam, sunt hic id modi. Perspiciatis ipsum rerum eligendi sed cum. Repellat hic natus numquam! Cum asperiores, consectetur adipisci quod, veniam est deserunt, quos quam expedita a praesentium.
+                    {blog.description}
                 </p>
+                <h5><Link className='link' to="/home">- Back to Home</Link></h5>
             </div>
         </div>
     );

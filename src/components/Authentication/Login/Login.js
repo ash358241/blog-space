@@ -7,6 +7,7 @@ import firebaseConfig from "../Login/firebase.config"
 import "firebase/auth";
 import { UserContext } from '../../../App';
 import { Button, Form } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -72,7 +73,10 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" onBlur={handleBlur} />
                 </Form.Group>
                 <br />
-                <Button variant="info" type="submit">Submit</Button>
+                <div className="btns">
+                <Button style={{color: 'white', textDecoration: 'none'}} variant="info" type="submit">Submit</Button>
+                <Button variant="info"><Link style={{color: 'white', textDecoration: 'none'}} to="/home">Home</Link></Button>
+                </div>
             </Form>
         </div>
     );
