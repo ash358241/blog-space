@@ -59,7 +59,7 @@ const AddBlog = () => {
   
     }
     return (
-        <div className="row">
+        <div className="row w-100">
             <div className="col-md-2">
                 <SideBar></SideBar>
             </div>

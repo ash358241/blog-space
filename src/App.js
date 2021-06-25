@@ -4,17 +4,25 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import SinglePost from './components/SinglePost/SinglePost';
 import Admin from './components/AdminPannel/Admin/Admin';
 import AddBlog from './components/AdminPannel/AddBlog/AddBlog';
 import ManageBlog from './components/AdminPannel/ManageBlog/ManageBlog';
+import { createContext } from 'react';
+import { useState } from 'react';
+import Login from './components/Authentication/Login/Login';
+import PrivateRoute from './components/Authentication/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
+
 
 function App() {
-  // const admin = false;
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
         <Route path="/home">
@@ -23,20 +31,24 @@ function App() {
         <Route path="/post/:postId">
           <SinglePost></SinglePost>
         </Route>
-        <Route path="/admin">
+        <PrivateRoute path="/admin">
           <Admin></Admin>
-        </Route>
-        <Route path="/addBlog">
+        </PrivateRoute>
+        <PrivateRoute path="/addBlog">
           <AddBlog></AddBlog>
-        </Route>
-        <Route path="/manageBlogs">
+        </PrivateRoute>
+        <PrivateRoute path="/manageBlogs">
           <ManageBlog></ManageBlog>
+        </PrivateRoute>
+        <Route path="/login">
+          <Login></Login>
         </Route>
         <Route exact path="/">
           <Home></Home>
         </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 

@@ -1,28 +1,21 @@
 import React from 'react';
-import './Post.css';
+import { Button, Card } from 'react-bootstrap';
 
-const Post = () => {
+const Post = ({blogData}) => {
+    const {title, description, imageURL} = blogData;
     return (
-        <div className="post my-5">
-          <img className="postImg" src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" />
-           <div className="postInfo">
-               <span className="postTitle">
-                   Lorem ipsum dolor sit amet
-               </span>
-               <hr />
-               <span className="postDate">1 hour ago</span>
-           </div>
-           <p className="postDesc">
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-               officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-               fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-               atque, exercitationem quibusdam, reiciendis odio laboriosam?
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-               officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-               fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-               atque, exercitationem quibusdam, reiciendis odio laboriosam?
-           </p>
-       </div>
+        <div>
+            <Card style={{ width: '25rem', textAlign: 'center', backgroundColor: '#E2D9CD', border: 'none' }}>
+                <Card.Img variant="top" src={imageURL} style={{width: '95%', margin: '10px auto'}} />
+                <Card.Body>
+                    <Card.Title style={{color: '#224A49', fontSize: '30px'}}>{title}</Card.Title>
+                    <Card.Text style={{fontSize: '20px'}}>
+                    <p>{description}</p>
+                    </Card.Text>
+                    
+                </Card.Body>
+            </Card>
+        </div>
     );
 };
 

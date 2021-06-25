@@ -1,8 +1,35 @@
-.posts{
-    flex: 12;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
+.blogsDiv{
+    background-color: #E8E3D9;
+    min-height: 100vh;
+}
+
+.blogsDiv h1{
+    text-align: center;
+    font-size: 7em;
+    font-weight: bold;
+    color: #224A49;
+    margin-bottom: 20px;
+}
+
+
+.blogsContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px){
+    .blogsContainer{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 668px){
+    .blogsContainer{
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    }
 }

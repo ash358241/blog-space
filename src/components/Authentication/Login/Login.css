@@ -1,0 +1,9 @@
+.logDiv{
+    background-color: #E8E3D9;
+    min-height: 100vh;
+}
+
+.logDiv h1{
+    font-weight: bold;
+    color: #224A49;
+}
