@@ -17,8 +17,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap:20px;
     place-items: center;
-    width: 100%;
-    margin: 0 auto;
+    /* width: 100%;
+    margin: 0 auto; */
 }
 
 @media (max-width: 992px){
