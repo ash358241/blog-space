@@ -23,7 +23,7 @@ const AddBlog = () => {
             imageURL: imageURL
         }
 
-        fetch('http://localhost:5000/addBlog', {
+        fetch('https://sleepy-mesa-38580.herokuapp.com/addBlog', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(formData)

@@ -9,7 +9,7 @@ const ManageBlog = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/blogs')
+        fetch('https://sleepy-mesa-38580.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => {
                 setBlogsData(data);
@@ -19,7 +19,7 @@ const ManageBlog = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/deleteBlog/${id}`, {
+        fetch(`https://sleepy-mesa-38580.herokuapp.com/deleteBlog/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

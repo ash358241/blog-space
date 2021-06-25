@@ -8,7 +8,7 @@ const SinglePost = () => {
     const [blog, setBlog] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blog/${blogId}`)
+        fetch(`https://sleepy-mesa-38580.herokuapp.com/blog/${blogId}`)
         .then(res => res.json())
         .then(data => setBlog(data))
     }, [blogId]);
