@@ -26,6 +26,7 @@ const SinglePost = () => {
                 <p className="singlePostDesc">
                     {blog.description}
                 </p>
+                <br />
                 <h5><Link className='link' to="/home">- Back to Home</Link></h5>
             </div>
         </div>

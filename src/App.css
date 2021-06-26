@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.appDiv{
+  font-family: 'PT Serif', serif;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

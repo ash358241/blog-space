@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #31261E;
+    color: #fff;
+    padding: 100px;
+}
+
+.sidebarSocial{
+    cursor: pointer;
+}
+
+.sidebarIcon{
+    color: #D2CABE;
+}

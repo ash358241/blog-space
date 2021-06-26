@@ -23,6 +23,8 @@ const Post = ({blogData}) => {
                     
                 </Card.Body>
             </Card>
+            <br />
+            <br />
         </div>
     );
 };

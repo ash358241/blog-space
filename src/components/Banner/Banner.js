@@ -6,7 +6,7 @@ const Banner = () => {
         <div className="banner">
             <div className="bannerText">
                 <h3>A good blog can make your day</h3>
-                <p>Select a blog and swing your mode!</p>
+                <p>Select a blog and swing your mood!</p>
             </div>
         </div>
     );

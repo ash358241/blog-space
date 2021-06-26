@@ -10,3 +10,9 @@ An user can read any specific blog with details.
 ## Features for Admin:
 1. Add blog 
 2. Delete blog
+
+## Technologies: 
+1. React.js
+2. Node.js
+3. Express.js 
+4. MongoDB

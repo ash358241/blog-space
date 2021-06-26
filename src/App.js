@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -22,7 +22,8 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
 
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <div className="appDiv">
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
       <Switch>
         <Route path="/home">
@@ -49,6 +50,7 @@ function App() {
       </Switch>
     </Router>
     </UserContext.Provider>
+    </div>
   );
 }
 

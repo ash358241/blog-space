@@ -15,7 +15,7 @@ const Posts = () => {
     }, [])
 
     return (
-        <div className="blogsDiv">
+        <div className="blogsDiv pt-5">
             <h1>Blogs For You</h1>
             <div className="blogsContainer">
             {
