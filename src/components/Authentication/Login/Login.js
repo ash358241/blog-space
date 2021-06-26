@@ -61,8 +61,8 @@ const Login = () => {
 
     return (
         <div className="logDiv">
-            <h1 className="text-center py-3">Login to procedure</h1>
-            <Form style={{width: '80%', margin: '0 auto'}} onSubmit={handleSubmit} className='form-container'>
+            <h1 className="text-center py-3">Login to proceed</h1>
+            <Form style={{width: '60%', margin: '0 auto'}} onSubmit={handleSubmit} className='form-container'>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" onBlur={handleBlur} />
@@ -73,7 +73,7 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" onBlur={handleBlur} />
                 </Form.Group>
                 <br />
-                <div className="btns">
+                <div className="btns m-2">
                 <Button style={{color: 'white', textDecoration: 'none'}} variant="info" type="submit">Submit</Button>
                 <Button variant="info"><Link style={{color: 'white', textDecoration: 'none'}} to="/home">Home</Link></Button>
                 </div>
