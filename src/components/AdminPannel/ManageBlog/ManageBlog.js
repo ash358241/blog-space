@@ -37,7 +37,7 @@ const ManageBlog = () => {
             <div className="col-md-2">
                 <SideBar></SideBar>
             </div>
-            <div className='col-md-10'>
+            <div className='col-md-10 mb-2'>
                 <h2 className="text-info mt-3 mb-3" style={{ marginLeft: '105px' }}>Manage Blogs</h2>
 
                 <Table striped bordered hover style={{ width: "80%", margin: '0 auto' }}>

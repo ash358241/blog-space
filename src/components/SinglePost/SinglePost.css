@@ -53,6 +53,7 @@
     line-height: 25px;
     text-align: justify;
     text-justify: inter-word;
+    white-space: pre-wrap;
   }
   
   .singlePostDesc::first-letter {

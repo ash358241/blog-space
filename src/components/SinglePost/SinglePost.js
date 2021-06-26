@@ -23,9 +23,9 @@ const SinglePost = () => {
                 <h1 className="singlePostTitle">
                     {blog.title}
                 </h1>
-                <p className="singlePostDesc">
+                <pre className="singlePostDesc">
                     {blog.description}
-                </p>
+                </pre>
                 <br />
                 <h5><Link className='link' to="/home">- Back to Home</Link></h5>
             </div>
