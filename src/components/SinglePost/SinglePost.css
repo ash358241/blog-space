@@ -1,9 +1,15 @@
 .singlePost{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
     background-color: #E8E3D9;
     min-height: 100vh;
+    position: relative;
+}
+
+.spinner{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #224A49;
 }
 
 .singlePostWrapper{
@@ -15,6 +21,7 @@
     height: 300px;
     object-fit: cover;
     object-position: center;
+    overflow: hidden;
   }
   
   .singlePostTitle {
