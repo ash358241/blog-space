@@ -15,7 +15,7 @@ const Post = ({blogData}) => {
     }
     return (
         <div>
-            <Card className="card" onClick={() => handleClick(_id)} style={{ width: '400px',height: '400px', margin: '0 auto', textAlign: 'center', backgroundColor: '#E2D9CD', border: 'none', cursor: 'pointer' }}>
+            <Card id="cardContent" onClick={() => handleClick(_id)}>
                 <Card.Img variant="top" src={imageURL} style={{width: '95%', height: '200px', margin: '10px auto', objectFit: 'cover'}} />
                 <Card.Body>
                     <Card.Title className="title" style={{color: '#224A49', fontSize: '30px'}}>{title}</Card.Title>
